@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int v1[10];
+    int v2[10];
+    int v3[20];
+
+    printf("Informe os valores do time A:\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &v1[i]);
+    }
+
+    printf("Informe os valores do time B:\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &v2[i]);
+    }
+
+    int j = 0;
+    for (int i = 0; i < 10; i++) {
+        v3[j++] = v1[i];
+        v3[j++] = v2[i];
+    }
+
+    printf("\nValores dos times A e B intercalados:\n");
+    for (int i = 0; i < 20; i++) { // O loop deve ir até 20 para percorrer todos os elementos de v3
+        printf("%d ", v3[i]);
+    }
+
+    return 0;
+}
