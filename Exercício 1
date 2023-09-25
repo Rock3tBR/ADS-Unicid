@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main() {
+    int vetor1[10];
+    int vetor2[10]; 
+	int comi;
+	
+    printf("Informe os valores de venda dos produtos:\n");
+
+    for (int i = 0; i < 10; i++) {
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &vetor1[i]);
+    }
+
+    printf("Informe a quantidade de venda dos produtos:\n");
+
+    for (int i = 0; i < 10; i++) {
+        printf("Elemento %d: ", i + 1);
+        scanf("%d", &vetor2[i]);
+    }
+
+    printf("\nValores dos produtos:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", vetor1[i]);
+    }
+
+    printf("\nQuantidade de venda:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", vetor2[i]);
+    }
+
+    int maior = vetor1[0];
+    int posicao = 0;
+
+    for (int i = 1; i < 10; i++) {
+        if (vetor1[i] > maior) {
+            maior = vetor1[i];
+            posicao = i;
+        }
+    }
+
+    printf("\nO maior valor vendido é %d e está na posição %d.\n", maior, posicao);
+    
+   int mult = 0;
+    for (int i = 0; i < 10; i++) {
+        mult += vetor1[i] * vetor2[i];
+}
+	printf("Valor total vendido = %d\n", mult);
+	
+	comi = (mult * 5/100);
+	
+	printf ("Valor de comissão que será paga para o funcionário = %d", comi);
+    return 0;
+}
